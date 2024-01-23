@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,24 @@ public class LogicScript : MonoBehaviour
 {
    public int playerScore;
    public Text scoreText;
+   public Text highScoreText;
    public GameObject gameOverScreen;
+
+   public void Start()
+   {
+      highScoreText.text = DataStore.HighScore.ToString();
+   }
 
    [ContextMenu("Increase Score")]
    public void addScore(int scoreToAdd)
    {
-      playerScore = playerScore + 1;
+      playerScore += 1;
       scoreText.text = playerScore.ToString();
+      if (playerScore > DataStore.HighScore)
+      {
+         DataStore.HighScore = playerScore;
+         highScoreText.text = DataStore.HighScore.ToString();
+      }
    }
 
    public void restartGame()
@@ -25,5 +37,10 @@ public class LogicScript : MonoBehaviour
    public void gameOver()
    {
       gameOverScreen.SetActive(true);
+      if (playerScore > DataStore.HighScore)
+      {
+         DataStore.HighScore = playerScore;
+         highScoreText.text = DataStore.HighScore.ToString();
+      }
    }
 }

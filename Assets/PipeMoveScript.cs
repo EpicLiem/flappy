@@ -15,7 +15,7 @@ public class PipeMoveScript : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + (Vector3.left * MoveSpeed) * Time.deltaTime;
-        if (transform.position.x < -26)
+        if (transform.position.x < -40)
         {
             Debug.Log("Pipe Deleted");
             Destroy(gameObject);
