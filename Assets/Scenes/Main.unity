@@ -408,8 +408,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -756, y: 225}
-  m_SizeDelta: {x: 294.5454, y: 358.2906}
+  m_AnchoredPosition: {x: -577.86847, y: 375.2353}
+  m_SizeDelta: {x: 650.8031, y: 241.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668190048
 MonoBehaviour:
@@ -535,8 +535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -778.16, y: 91}
-  m_SizeDelta: {x: 250.2227, y: 242.7349}
+  m_AnchoredPosition: {x: -618.29834, y: 200.6748}
+  m_SizeDelta: {x: 569.9434, y: 151.3853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902417920
 MonoBehaviour:
@@ -1045,7 +1045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728371969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16885376, y: -0.66962004, z: 0.07685828}
+  m_LocalPosition: {x: 6.16, y: 0.51, z: 0.07685828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1088,8 +1088,9 @@ MonoBehaviour:
   myRigidbody: {fileID: 1728371972}
   flapStrength: 10
   logic: {fileID: 0}
-  RoationRate: 20
+  roationRate: 20
   birdIsAlive: 1
+  explosion: {fileID: 3636299656479384937, guid: adf3e31ef328bdc45beb206e557e71ba, type: 3}
 --- !u!58 &1728371974
 CircleCollider2D:
   m_ObjectHideFlags: 0

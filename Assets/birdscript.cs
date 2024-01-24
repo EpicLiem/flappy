@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class birdscript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float flapStrength;
     public LogicScript logic;
-    public float RoationRate;
+    public float roationRate;
     public bool birdIsAlive = true;
+    public GameObject explosion;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class birdscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate( (Vector3.forward * -RoationRate) * Time.deltaTime);
+        transform.Rotate( (Vector3.forward * -roationRate) * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Space) == true && birdIsAlive)
         {
             transform.eulerAngles = Vector3.zero;
@@ -38,5 +40,7 @@ public class birdscript : MonoBehaviour
     {
         logic.gameOver();
         birdIsAlive = false;
+        gameObject.SetActive(false);
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 }

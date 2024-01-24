@@ -7,4 +7,5 @@ using UnityEngine;
 public static class DataStore
 {
     public static int HighScore { get; set; } = 0;
+    public static bool Unloaded { get; set; } = true;
 }
